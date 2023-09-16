@@ -10,7 +10,9 @@ function Header() {
         <Link to="/" className={styles.logo} aria-label="Dogs - Home">
           <Dogs />
         </Link>
-        <Link to="/login">Login/Cadastro</Link>
+        <Link to="/login" className={styles.login}>
+          Login / Criar
+        </Link>
       </nav>
     </header>
   );
