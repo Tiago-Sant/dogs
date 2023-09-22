@@ -1,9 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import UseForm from '../../Hooks/UseForm';
-import { GET_USER, TOKEN_POST } from '../../api';
 import { UserContext } from '../../UserContext';
 
 function LoginForm() {

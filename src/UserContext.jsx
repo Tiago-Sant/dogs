@@ -1,6 +1,5 @@
-import React, { createContext, useCallback } from 'react';
+import React, { createContext, useCallback, useEffect } from 'react';
 import { GET_USER, TOKEN_POST, TOKEN_VALIDATE_POST } from './api';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const UserContext = createContext();
@@ -82,6 +81,7 @@ export const UserStorege = ({ children }) => {
     }
     autoLogin();
   }, [logout]);
+
   return (
     <UserContext.Provider
       value={{ data, login, userLogin, isLoading, error, logout }}
