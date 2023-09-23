@@ -14,8 +14,8 @@ function Login() {
     <div>
       <Routes>
         <Route path="/" element={<LoginForm />} />
-        <Route path="create" element={<LoginCreate />} />
-        <Route path="losted" element={<LoginPasswordLost />} />
+        <Route path="register" element={<LoginCreate />} />
+        <Route path="forgot" element={<LoginPasswordLost />} />
         <Route path="reset" element={<LoginPasswordReset />} />
       </Routes>
     </div>
