@@ -4,7 +4,7 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import UseForm from '../../Hooks/UseForm';
 import { UserContext } from '../../UserContext';
-import Error from '../Helper/Error';
+import ErrorMessage from '../Helper/ErrorMessage';
 import styles from './LoginForm.module.css';
 import stylesBtn from '../Forms/Button.module.css';
 
@@ -30,7 +30,7 @@ function LoginForm() {
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" name="username" type="text" {...username} />
         <Input label="Senha" name="password" type="password" {...password} />
-        {error && <Error error={error} />}
+        {error && <ErrorMessage error={error} />}
         {isLoading ? (
           <Button disabled>Carregando...</Button>
         ) : (

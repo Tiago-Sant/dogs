@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Error({ error }) {
+function ErrorMessage({ error }) {
   if (!error) return null;
   return (
     <p style={{ color: '#f31', margin: '1rem 0', fontSize: '.8rem' }}>
@@ -9,4 +9,4 @@ function Error({ error }) {
   );
 }
 
-export default Error;
+export default ErrorMessage;
