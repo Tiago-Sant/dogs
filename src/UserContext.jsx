@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useEffect } from 'react';
-import { GET_USER, TOKEN_POST, TOKEN_VALIDATE_POST } from './api';
+import { USER_GET, TOKEN_POST, TOKEN_VALIDATE_POST } from './Api';
 import { useNavigate } from 'react-router-dom';
 
 export const UserContext = createContext();
@@ -15,7 +15,7 @@ export const UserStorege = ({ children }) => {
     setIsLoading(true);
     setError(null);
     try {
-      const { url, options } = GET_USER(token);
+      const { url, options } = USER_GET(token);
       const response = await fetch(url, options);
       const data = await response.json();
       setData(data);

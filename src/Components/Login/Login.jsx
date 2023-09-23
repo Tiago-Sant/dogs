@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import LoginForm from './LoginForm';
-import LoginCreate from './LoginCreate';
+import LoginRegister from './LoginRegister';
 import LoginPasswordLost from './LoginPasswordLost';
 import LoginPasswordReset from './LoginPasswordReset';
 import { UserContext } from '../../UserContext';
@@ -16,7 +16,7 @@ function Login() {
       <div className={styles.forms}>
         <Routes>
           <Route path="/" element={<LoginForm />} />
-          <Route path="register" element={<LoginCreate />} />
+          <Route path="register" element={<LoginRegister />} />
           <Route path="forgot" element={<LoginPasswordLost />} />
           <Route path="reset" element={<LoginPasswordReset />} />
         </Routes>
