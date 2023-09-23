@@ -8,6 +8,8 @@ function UserPost() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    console.log(JSON.stringify({ username, password, email }));
+
     const response = await fetch('https://dogsapi.origamid.dev/json/api/user', {
       method: 'POST',
       headers: {

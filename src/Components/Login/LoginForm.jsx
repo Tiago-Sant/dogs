@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Input from '../Forms/Input';
 import Button from '../Forms/Button';
-import UseForm from '../../Hooks/UseForm';
+import useForm from '../../Hooks/useForm';
 import { UserContext } from '../../UserContext';
 import ErrorMessage from '../Helper/ErrorMessage';
 import styles from './LoginForm.module.css';
 import stylesBtn from '../Forms/Button.module.css';
 
 function LoginForm() {
-  const username = UseForm();
-  const password = UseForm();
+  const username = useForm();
+  const password = useForm();
 
   const { userLogin, error, isLoading } = useContext(UserContext);
 
@@ -19,7 +19,7 @@ function LoginForm() {
 
     if (!username.validate() || !password.validate()) return;
 
-    await userLogin(username.value, password.value);
+    userLogin(username.value, password.value);
   };
 
   return (
@@ -43,7 +43,7 @@ function LoginForm() {
       <div className={styles.register}>
         <h2 className={styles.subtitle}>Cadastre-se</h2>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
-        <Link className={stylesBtn.button} to="/login/create">
+        <Link className={stylesBtn.button} to="/login/register">
           Cadastro
         </Link>
       </div>

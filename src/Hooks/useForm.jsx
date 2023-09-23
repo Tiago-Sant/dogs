@@ -5,9 +5,14 @@ const types = {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
     message: 'Preencha um email válido',
   },
+  password: {
+    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+    message:
+      'A senha precisa ter 8 caracteres, uma letra maiúscula, uma minúscula e um número',
+  },
 };
 
-function UseForm(type) {
+function useForm(type) {
   const [value, setValue] = React.useState('');
   const [error, setError] = React.useState(null);
 
@@ -43,4 +48,4 @@ function UseForm(type) {
   };
 }
 
-export default UseForm;
+export default useForm;
