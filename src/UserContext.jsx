@@ -42,7 +42,7 @@ export const UserStorege = ({ children }) => {
       localStorage.setItem('token', token);
       getUser(token);
       setLogin(true);
-      navigate('/conta');
+      navigate('/account');
     } catch (e) {
       setError(e.message);
     } finally {
@@ -77,7 +77,10 @@ export const UserStorege = ({ children }) => {
         } finally {
           setIsLoading(false);
         }
+        return;
       }
+
+      setLogin(false);
     }
     autoLogin();
   }, [logout]);
