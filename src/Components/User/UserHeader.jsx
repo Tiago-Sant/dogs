@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 const titles = {
   '/account': 'Minhas Fotos',
   '/account/stats': 'Estatísticas',
-  '/account/post': 'Adicionar Foto',
+  '/account/post': 'Poste sua Foto',
 };
 
 function UserHeader() {

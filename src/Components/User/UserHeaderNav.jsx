@@ -51,7 +51,7 @@ function UserHeaderNav() {
         </NavLink>
         <NavLink to="/account/post">
           <AddPhoto />
-          {isMobile && 'Adicionar Foto'}
+          {isMobile && 'Poste sua Foto'}
         </NavLink>
         <button onClick={handleLogout}>
           <Logout />
