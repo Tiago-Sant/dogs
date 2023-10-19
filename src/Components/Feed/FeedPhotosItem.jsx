@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './FeedPhotosItem.module.css';
 
-function FeedPhotosItem({ photo }) {
+function FeedPhotosItem({ photo, setModalPhoto }) {
   return (
-    <li className={styles.photo}>
+    <li className={styles.photo} onClick={() => setModalPhoto(photo)}>
       <img src={photo.src} alt={photo.title} />
       <span className={styles.views}>{photo.acessos}</span>
     </li>
