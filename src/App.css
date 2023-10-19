@@ -52,6 +52,10 @@ input {
   padding: 0 1rem;
 }
 
+.mainContainer {
+  margin-top: 4rem;
+}
+
 .App {
   display: flex;
   flex-direction: column;
