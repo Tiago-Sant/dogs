@@ -45,8 +45,8 @@
   overflow: hidden;
 }
 
-.button,
-.button {
+.button:focus,
+.button:hover {
   outline: none;
 }
 
