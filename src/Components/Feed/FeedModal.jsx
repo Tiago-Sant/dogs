@@ -23,11 +23,15 @@ function FeedModal({ photo, setModalPhoto }) {
     }
   };
   return (
-    <div className={styles.modal} onClick={handleOutsideClick}>
-      {error && <ErrorMessage error={error} />}
-      {loading && <Loading />}
-      {data && !Array.isArray(data) && <PhotoContent data={data} />}
-    </div>
+    <>
+      <ErrorMessage error={error} />
+      {!error && (
+        <div className={styles.modal} onClick={handleOutsideClick}>
+          {loading && <Loading />}
+          {data && !Array.isArray(data) && <PhotoContent data={data} />}
+        </div>
+      )}
+    </>
   );
 }
 
