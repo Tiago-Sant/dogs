@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import PhotoComments from './PhotoComments';
 import { UserContext } from '../../UserContext';
 import PhotoDelete from './PhotoDelete';
+import Image from '../Helper/Image';
+import PropTypes from 'prop-types';
 
 function PhotoContent({ data }) {
   const user = useContext(UserContext);
@@ -12,7 +14,7 @@ function PhotoContent({ data }) {
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title} />
       </div>
       <div className={styles.details}>
         <div>
@@ -39,5 +41,12 @@ function PhotoContent({ data }) {
     </div>
   );
 }
+
+PhotoContent.propTypes = {
+  data: PropTypes.shape({
+    photo: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired,
+  }),
+};
 
 export default PhotoContent;
