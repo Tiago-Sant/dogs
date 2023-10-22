@@ -57,7 +57,7 @@ Feed.defaultProps = {
 };
 
 Feed.propTypes = {
-  user: PropTypes.number.isRequired,
+  user: PropTypes.number,
 };
 
 export default Feed;
