@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './FeedPhotosItem.module.css';
 import Image from '../Helper/Image';
+import PropTypes from 'prop-types';
 
 function FeedPhotosItem({ photo, setModalPhoto }) {
   return (
@@ -10,5 +11,10 @@ function FeedPhotosItem({ photo, setModalPhoto }) {
     </li>
   );
 }
+
+FeedPhotosItem.propTypes = {
+  photo: PropTypes.object.isRequired,
+  setModalPhoto: PropTypes.func.isRequired,
+};
 
 export default FeedPhotosItem;

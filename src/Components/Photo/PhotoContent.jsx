@@ -5,6 +5,7 @@ import PhotoComments from './PhotoComments';
 import { UserContext } from '../../UserContext';
 import PhotoDelete from './PhotoDelete';
 import Image from '../Helper/Image';
+import PropTypes from 'prop-types';
 
 function PhotoContent({ data }) {
   const user = useContext(UserContext);
@@ -40,5 +41,12 @@ function PhotoContent({ data }) {
     </div>
   );
 }
+
+PhotoContent.propTypes = {
+  data: PropTypes.shape({
+    photo: PropTypes.object.isRequired,
+    comments: PropTypes.array.isRequired,
+  }),
+};
 
 export default PhotoContent;
