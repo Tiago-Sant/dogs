@@ -5,7 +5,7 @@ import { COMMENT_POST } from '../../Api';
 import ErrorMessage from '../Helper/ErrorMessage';
 import styles from './PhotoCommentsForm.module.css';
 
-function PhotoCommentsForm({ id, setCommentsUpdated }) {
+function PhotoCommentsForm({ id, setCommentsUpdated, single }) {
   const [comment, setComment] = React.useState(null);
   const { request, error, loading } = useFetch();
   const token = window.localStorage.getItem('token');
@@ -24,7 +24,10 @@ function PhotoCommentsForm({ id, setCommentsUpdated }) {
     setComment(event.target.value);
   }
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.form} ${single ? styles.single : ''}`}
+      onSubmit={handleSubmit}
+    >
       <label
         className={styles.label}
         htmlFor="comment"

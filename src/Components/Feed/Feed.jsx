@@ -44,7 +44,6 @@ function Feed({ user }) {
           page={page}
           user={user}
           setModalPhoto={setModalPhoto}
-          total={3}
           setInfinity={setInfinity}
         />
       ))}

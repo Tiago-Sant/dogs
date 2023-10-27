@@ -5,6 +5,10 @@
   margin: 1rem;
 }
 
+.form.single {
+  margin: 1rem 0;
+}
+
 .label {
   font-size: 1rem;
   margin-bottom: 0.5rem;
