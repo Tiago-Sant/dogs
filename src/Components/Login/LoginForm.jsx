@@ -25,7 +25,6 @@ function LoginForm() {
   return (
     <section className="animeLeft">
       <h1 className="title">Login</h1>
-      <Link to="/login/create">Cadastro</Link>
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <Input label="Usuário" name="username" type="text" {...username} />
