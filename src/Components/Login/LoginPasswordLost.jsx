@@ -5,6 +5,7 @@ import Input from '../Forms/Input';
 import useFecth from '../../Hooks/useFetch';
 import ErrorMessage from '../Helper/ErrorMessage';
 import { PASSWORD_LOST } from '../../Api';
+import Head from '../Helper/Head';
 
 function LoginPasswordLost() {
   const login = useForm();
@@ -23,6 +24,7 @@ function LoginPasswordLost() {
   }
   return (
     <section>
+      <Head title="Perdeu a senha?" />
       <h1 className="title">Perdeu a senha?</h1>
       {data && !Array.isArray(data) ? (
         <p style={{ color: '#4c1' }}>{data}</p>

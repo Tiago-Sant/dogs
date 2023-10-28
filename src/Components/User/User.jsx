@@ -6,11 +6,16 @@ import UserPhotoPost from './UserPhotoPost';
 import UserStats from './UserStats';
 import { UserContext } from '../../UserContext';
 import NotFound from '../NotFound';
+import Head from '../Helper/Head';
 
 function User() {
   const { data } = React.useContext(UserContext);
   return (
     <section className="container">
+      <Head
+        title="Minha Conta"
+        description="Página de conta do usuário do site Dogs, com feed de fotos do usuário."
+      />
       <UserHeader />
       <Routes>
         <Route path="/" element={<Feed user={data?.id} />} />
