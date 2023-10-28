@@ -5,6 +5,7 @@ import { PHOTO_GET } from '../../Api';
 import ErrorMessage from '../Helper/ErrorMessage';
 import Loading from '../Helper/Loading';
 import PhotoContent from './PhotoContent';
+import Head from '../Helper/Head';
 
 function Photo() {
   const { id } = useParams();
@@ -23,6 +24,10 @@ function Photo() {
   if (data && !Array.isArray(data))
     return (
       <section className="container mainContainer">
+        <Head
+          title={data.photo.title}
+          description={`Página da foto ${data.photo.title} do site Dogs.`}
+        />
         <PhotoContent data={data} single={true} />
       </section>
     );
