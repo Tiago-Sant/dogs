@@ -1,10 +1,10 @@
 .photo {
   margin: auto;
-  height: 36rem;
+  height: 32rem;
   border-radius: 0.2rem;
   background: white;
   display: grid;
-  grid-template-columns: 36rem 20rem;
+  grid-template-columns: 32rem 20rem;
   grid-template-rows: auto 1fr auto;
   overflow: hidden;
   opacity: 0;
@@ -46,7 +46,7 @@
   padding: 0 2rem;
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 60rem) {
   .photo {
     height: auto;
     max-height: calc(100vh - 4rem);
