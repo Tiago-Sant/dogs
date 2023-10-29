@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './UserStatsGraphs.module.css';
 import { VictoryPie, VictoryChart, VictoryBar } from 'victory';
+import PropTypes from 'prop-types';
 
 function UserStatsGraphs({ data }) {
   const [graph, setGraph] = React.useState([]);
@@ -51,5 +52,9 @@ function UserStatsGraphs({ data }) {
     </section>
   );
 }
+
+UserStatsGraphs.propTypes = {
+  data: PropTypes.array.isRequired,
+};
 
 export default UserStatsGraphs;
