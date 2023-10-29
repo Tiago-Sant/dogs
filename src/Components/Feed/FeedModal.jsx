@@ -28,7 +28,7 @@ function FeedModal({ photo, setModalPhoto }) {
       {!error && (
         <div className={styles.modal} onClick={handleOutsideClick}>
           {loading && <Loading />}
-          {data && !Array.isArray(data) && <PhotoContent data={data} />}
+          {data && <PhotoContent data={data} />}
         </div>
       )}
     </>

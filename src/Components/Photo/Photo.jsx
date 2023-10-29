@@ -21,7 +21,7 @@ function Photo() {
 
   if (error) return <ErrorMessage error={error} />;
   if (loading) return <Loading />;
-  if (data && !Array.isArray(data))
+  if (data)
     return (
       <section className="container mainContainer">
         <Head
