@@ -4,6 +4,7 @@ import useFetch from '../../Hooks/useFetch';
 import { COMMENT_POST } from '../../Api';
 import ErrorMessage from '../Helper/ErrorMessage';
 import styles from './PhotoCommentsForm.module.css';
+import PropTypes from 'prop-types';
 
 function PhotoCommentsForm({ id, setCommentsUpdated, single }) {
   const [comment, setComment] = React.useState(null);
@@ -56,5 +57,11 @@ function PhotoCommentsForm({ id, setCommentsUpdated, single }) {
     </form>
   );
 }
+
+PhotoCommentsForm.propTypes = {
+  id: PropTypes.number.isRequired,
+  setCommentsUpdated: PropTypes.func.isRequired,
+  single: PropTypes.bool,
+};
 
 export default PhotoCommentsForm;

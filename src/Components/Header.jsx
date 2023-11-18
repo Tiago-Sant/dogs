@@ -13,11 +13,9 @@ function Header() {
           <Dogs />
         </Link>
         {data ? (
-          <>
-            <Link to="/account" className={styles.login}>
-              {data.nome}
-            </Link>
-          </>
+          <Link to="/account" className={styles.login}>
+            {data.nome}
+          </Link>
         ) : (
           <Link to="/login" className={styles.login}>
             Login / Criar

@@ -47,6 +47,7 @@ PhotoContent.propTypes = {
     photo: PropTypes.object.isRequired,
     comments: PropTypes.array.isRequired,
   }),
+  single: PropTypes.bool,
 };
 
 export default PhotoContent;
