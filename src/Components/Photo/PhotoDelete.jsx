@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './PhotoDelete.module.css';
 import useFetch from '../../Hooks/useFetch';
 import { PHOTO_DELETE } from '../../Api';
+import PropTypes from 'prop-types';
 
 function PhotoDelete({ id }) {
   const { request, loading } = useFetch();
@@ -27,5 +28,9 @@ function PhotoDelete({ id }) {
     </>
   );
 }
+
+PhotoDelete.propTypes = {
+  id: PropTypes.number.isRequired,
+};
 
 export default PhotoDelete;

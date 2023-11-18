@@ -2,6 +2,7 @@ import React from 'react';
 import { UserContext } from '../../UserContext';
 import PhotoCommentsForm from './PhotoCommentsForm';
 import styles from './PhotoComments.module.css';
+import PropTypes from 'prop-types';
 
 function PhotoComments({ id, comments, single }) {
   const [commentsUpdated, setCommentsUpdated] = React.useState(() => comments);
@@ -37,5 +38,11 @@ function PhotoComments({ id, comments, single }) {
     </>
   );
 }
+
+PhotoComments.propTypes = {
+  id: PropTypes.number.isRequired,
+  comments: PropTypes.array.isRequired,
+  single: PropTypes.bool,
+};
 
 export default PhotoComments;
