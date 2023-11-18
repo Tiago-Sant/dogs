@@ -1,7 +1,7 @@
 import React from 'react';
 
 function UserPost() {
-  const [username, setUserName] = React.useState('');
+  const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [email, setEmail] = React.useState('');
 
@@ -31,7 +31,7 @@ function UserPost() {
           type="text"
           value={username}
           placeholder="username"
-          onChange={({ target }) => setUserName(target.value)}
+          onChange={({ target }) => setUsername(target.value)}
         />
       </fieldset>
 

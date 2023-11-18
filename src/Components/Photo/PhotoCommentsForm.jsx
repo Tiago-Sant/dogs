@@ -7,7 +7,7 @@ import styles from './PhotoCommentsForm.module.css';
 import PropTypes from 'prop-types';
 
 function PhotoCommentsForm({ id, setCommentsUpdated, single }) {
-  const [comment, setComment] = React.useState(null);
+  const [comment, setComment] = React.useState('');
   const { request, error, loading } = useFetch();
   const token = window.localStorage.getItem('token');
 

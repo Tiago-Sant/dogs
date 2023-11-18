@@ -1,7 +1,7 @@
 import React from 'react';
 
 function TokenPost() {
-  const [username, setUserName] = React.useState('');
+  const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [token, setToken] = React.useState('');
 
@@ -34,7 +34,7 @@ function TokenPost() {
           type="text"
           value={username}
           placeholder="username"
-          onChange={({ target }) => setUserName(target.value)}
+          onChange={({ target }) => setUsername(target.value)}
         />
       </fieldset>
 

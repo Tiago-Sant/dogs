@@ -1,6 +1,7 @@
 import React, { createContext, useCallback, useEffect } from 'react';
 import { USER_GET, TOKEN_POST, TOKEN_VALIDATE_POST } from './Api';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export const UserContext = createContext();
 
@@ -91,4 +92,8 @@ export const UserStorege = ({ children }) => {
       {children}
     </UserContext.Provider>
   );
+};
+
+UserStorege.propTypes = {
+  children: PropTypes.node.isRequired,
 };

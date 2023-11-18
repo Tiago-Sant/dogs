@@ -43,7 +43,7 @@ FeedPhotos.defaultProps = {
 };
 
 FeedPhotos.propTypes = {
-  user: ProtoTypes.number,
+  user: ProtoTypes.oneOfType([ProtoTypes.string, ProtoTypes.number]),
   setModalPhoto: ProtoTypes.func.isRequired,
   setInfinity: ProtoTypes.func.isRequired,
   page: ProtoTypes.number,
