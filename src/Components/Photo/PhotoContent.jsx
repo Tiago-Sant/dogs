@@ -18,14 +18,14 @@ function PhotoContent({ data, single }) {
       </div>
       <div className={styles.details}>
         <div>
-          <p className={styles.author}>
+          <span className={styles.author}>
             {user.data && user.data.username === photo.author ? (
               <PhotoDelete id={photo.id} />
             ) : (
               <Link to={`/profile/${photo.author}`}>@{photo.author}</Link>
             )}
             <span className={styles.views}>{photo.acessos}</span>
-          </p>
+          </span>
           <h1 className="title">
             <Link to={`/photo/${photo.id}`}>{photo.title}</Link>
           </h1>
